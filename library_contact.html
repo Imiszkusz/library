@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Városi Könyvtár">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Városi Könyvtár</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Volkhov" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle:700|Ruda:900" rel="stylesheet">
+  <link href="library_css.css"rel="stylesheet">
+</head>
+  
+<body>
+
+  <header>
+    <nav>
+      <ul class="menu-left">
+        <li><a href="library_news.html">Hírek</a></li>
+        <li><a href="library_introduction.html">Bemutatkozás</a></li>
+        <li><a href="library_services.html">Szolgáltatások</a></li>
+      </ul>
+      <ul class="menu-right">
+        <li><a href="library_catalogue.html">Katalógus</a></li>
+        <li><a href="library_gallery.html">Galéria</a></li>
+        <li><a href="library_contact.html">Kapcsolat</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="contact-section">
+
+    <article class="contact-details">
+      <div class="contact-wrapper">
+       <h4>Telefonszámok</h4>
+        <ul>
+          <li>Igazgatóság: +36 33 333333</li>
+          <li>Recepció: +36 33 333344</li>
+          <li>Olvasószolgálat: +36 33 333355</li>
+          <li>Hangtár: +36 33 333366</li>
+          <li>Helytörténeti Gyűjtemény: +36 33 333377</li>
+          <li>Kiállítóterem: +36 33 333388</li>
+        </ul>
+      </div>
+
+      <div class="contact-wrapper">
+       <h4>Címek</h4>
+        <ul>
+          <li>Cím: 6574, Kukutyin Sár utca 13.</li>
+          <li>Email: <a href="target_blank">blugyblugykonytar@gmail.com</a></li>
+        </ul>
+      </div>
+
+    </article>
+
+    <div id="separator"></div>
+    
+    <article class="contact-details-2">
+
+       <div class="contact-wrapper">
+         <h4>Térkép</h4>
+         <div id="map"></div>
+       </div>
+
+      
+      <div class="contact-wrapper">
+        <h4>Üzenetküldés</h4>
+        <form action="#" method="post">
+         <article class="contact-msg">
+           <label for="name" class="input-lbl">Kérem, adja meg a nevét:</label>
+           <input type="text" value="" name="name" class="input-msg">
+
+           <label for="email" class="input-lbl">Kérem, adja meg az email címét:</label>
+           <input type="text" value="" name="email" class="input-msg">
+
+           <label for="message" class="input-lbl">Ide írja az üzenetét:</label>
+           <textarea value="" name="message" rows="12"></textarea>
+
+           <input type="submit" value="Küldés" id="input-msg-send">
+         </article>
+        </form>
+       </div>
+
+    <article class="contact-details-2">
+
+
+    
+  </section>
+  
+  <footer>
+    <p>Készítette JimreMat, 2017</p>
+    <p><a href="target_blank">Tel.: +36xxxxxxxx</a></p>
+    <p><a href="library_contact.html">Kapcsolat</a></p>
+  </footer>
+
+
+  <script>
+     function initMap(){
+        var bivalybasznad = {lat: 46.572, lng: 21.138};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: bivalybasznad
+        });
+        var marker = new google.maps.Marker({
+          position: bivalybasznad,
+          map: map
+        });
+      }
+  </script>
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_RVTuzyEkG8V9Auw6Z89VpK-NQzgqYJA&callback=initMap"></script>
+</body>
+  
+</html>

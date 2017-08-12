@@ -1,0 +1,588 @@
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+====================================================================
+Main Styles
+====================================================================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Sort Mill Goudy', serif;
+}
+
+
+body, header, article, section, div, nav, footer{
+  display: flex;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 0;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  margin: 2rem 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+h3 {
+  align-self: flex-start;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 0 1rem .2rem 1rem;
+}
+
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2rem 0 .5rem .8rem;
+}
+
+
+p {
+  margin: 0 1rem 2rem 1rem;
+  text-align: justify;
+  line-height: 1.15rem;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Header */
+
+header {
+  width: 100vw;
+  height: 30vh;
+  font-family: 'Volkhov', serif;
+  background: url('http://cdnwp.audiencemedia.com/wp-content/uploads/2017/04/803819-1-eng-GB_bookshelf-header-960x420.jpg') no-repeat center;
+}
+
+
+nav {
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
+.menu-left, .menu-right {
+  background-color: white;
+  font-size: .75rem;
+  text-align: center;
+}
+
+
+li {
+  padding: .5rem;
+}
+
+
+header li:hover {
+  background-color: rgba(77,77,255, 0.3)
+}
+
+.menu-left > li:first-child, .menu-left {
+  border-radius: 0 10px 0 0;
+}
+
+
+.menu-right > li:nth-child(1), .menu-right {
+  border-radius:  10px 0 0 0;
+}
+
+
+/* 
+====================================================================
+Sections
+====================================================================
+*/
+
+
+section {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/light_grey.png');
+}
+
+section:after {
+    content: "";
+    display: block;
+    height: .1875rem;
+    width: 70vw;
+    margin: 1rem auto 1.5em auto;
+    background-color: rgb(101,61,33);
+}
+
+.first-news, .intro-wrapper {
+  display: block;
+}
+
+#news-img {
+  width: 70%;
+  padding: 0 .25rem .25rem 0;
+  margin: .5rem .5rem .5rem 1rem;
+  float: left;
+}
+
+
+#intro-img {
+  width: 70%;
+  float: left;
+  margin: 0 1rem 1rem 1rem;
+}
+
+#intro-img2 {
+  width: 70%;
+  float: right;
+  margin: 0 1rem 1rem 1rem;
+}
+
+
+/*
+===================================================================
+Section-Gallery
+===================================================================
+*/
+
+.img-wrapper {
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.img-wrapper img {
+  margin: .25rem;
+  border: 1px solid rgb(101,61,33);
+}
+
+
+
+/*
+===================================================================
+Section-Services
+===================================================================
+*/
+
+.services-section {
+  align-items: flex-start;
+  font-family: 'Hind', sans-serif;
+}
+
+.services-list {
+  margin: 1.5rem 1rem;
+}
+
+
+.services-section p {
+  font-weight: bold;
+  margin: 1rem 0 0 .8rem;
+}
+
+.fee-list {
+  margin: 1rem;
+}
+
+
+/*
+===================================================================
+Section-Catalogue
+===================================================================
+*/
+
+fieldset {
+  padding: 1rem;
+  background-color: rgb(249,205,168);
+  border: 1px solid rgb(101,61,33);
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  flex-flow: row wrap;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.search-input p {
+  margin: 0 .5rem;
+}
+
+.radio-input {
+  flex-direction: column;
+}
+
+#ctlg-submit {
+  float: right;
+  margin-top: .5rem;
+}
+
+
+/*
+===================================================================
+Section-Contact
+===================================================================
+*/
+
+.contact-details, .contact-details-2, .contact-wrapper, .contact-section {
+  flex-direction: column;
+  /*background-color: rgb(212,235,242);*/
+}
+
+.contact-section {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hind', sans-serif;
+}
+
+.contact-details {
+  width: 100%;
+}
+
+#separator {
+    content: "";
+    display: block;
+    height: .1875rem;
+    width: 80%;
+    margin: 2rem auto 1.5em auto;
+    background-color: rgb(101,61,33);
+}
+
+.contact-msg {
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.input-msg {
+  margin-bottom: 1rem;
+}
+
+.input-lbl {
+  margin-bottom: .3rem;
+}
+
+#input-msg-send {
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+#map {
+  height: 10rem;
+  width: 10rem;
+}
+
+.contact-section a:hover {
+  font-weight: bold;
+}
+
+
+
+
+
+/*
+===================================================================
+Footer
+===================================================================
+*/
+
+
+footer {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/light_grey.png');
+  
+}
+
+footer p {
+  font-size: .8rem;
+  margin-bottom: .75rem;
+}
+
+footer a:hover {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+====================================================================
+Media Querys
+====================================================================
+*/
+
+@media (min-width: 480px){
+  
+  nav {
+    justify-content: center;
+  }
+
+  li {
+    display: inline-block;
+    font-size: .8rem;
+    padding: .6rem .4rem .6rem .4rem;
+  }
+  
+  .menu-left > li:first-child, .menu-left {
+    border-radius: 10px 0 0 0;
+  }
+
+  .menu-right > li:nth-child(3), .menu-right {
+    border-radius: 0 10px 0 0;
+  }
+  
+  .menu-right > li:first-child {
+    border-radius: 0;
+  }
+  
+  section {
+    padding: 1rem 2rem;
+  }
+  
+  h1 {
+    margin: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  #intro-img, #intro-img2 {
+  width: 60%;
+}
+
+  #ctlg-submit {
+  margin-top: 1rem;
+}
+
+  .contact-details-2 {
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
+
+  #map {
+    margin-right: 2.5rem;
+}
+
+  footer p {
+    font-size: 1rem;
+  }
+  
+}
+
+
+
+
+
+@media (min-width: 768px){
+  
+  body {
+    background: url('http://thepatternlibrary.com/img/i.jpg');
+  }
+  
+  header li {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+    
+  section {
+    width: 80%;
+    border: 2px solid rgb(101,61,33);
+    border-bottom: none;
+    border-radius: 5px;
+  }
+  
+  section:after {
+    display: none;
+  }
+  
+  p {
+    line-height: 1.25rem;
+  }
+  
+  #news-img {
+    width: 60%;
+ }
+
+  #intro-img, #intro-img2 {
+    width: 50%;
+ }
+
+
+  .services-section li {
+    font-size: 1rem;
+    display: block;
+    line-height: .5rem;
+ }
+
+ .contact-details {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+ }
+
+  .contact-details li {
+    display: block;
+    font-size: 1rem;
+    padding: .4rem;
+  }
+
+  #map {
+    width: 15rem;
+    height: 15rem;
+ }
+  
+  footer {
+    width: 90%;
+    border-radius: 15px;
+    border-bottom: 4px solid rgb(101,61,33);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  footer p {
+    margin: 0;
+    padding: 1.5rem .75rem .75rem;
+  }
+  
+}
+
+
+
+@media (min-width: 1100px){
+  
+  
+  h1 {
+    font-size: 3.5rem;
+    margin: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  section {
+    width: 75%;
+    padding: 1.5rem 3rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  #news-img {
+    width: 50%;
+    margin: .5rem 1rem 1rem 1rem;
+}
+
+  #intro-img, #intro-img2 {
+    width: 40%;
+}
+
+  fieldset {
+    padding: 1.5rem;
+}
+
+  .search-input {
+    padding: 1rem 0;
+}
+
+  .search-input p {
+    margin: 0 2rem;
+}
+
+  .radio-input {
+    padding-left: 1rem;
+}
+
+  .contact-details {
+    width: 90%;
+}
+
+  .contact-details-2 {
+    justify-content: space-around;
+}
+
+   #map {
+     width: 20rem;
+     height: 20rem;
+  }
+  
+}
